@@ -1,0 +1,155 @@
+// colors
+$Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$Grayish-Blue: hsl(212, 23%, 69%);
+$Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $Light-Grayish-Blue;
+}
+
+main {
+  background-color: white;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.img-container {
+  width: 22rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+
+.text-container {
+  padding: 2.5rem 3rem;
+  width: 34rem;
+
+  .headline {
+    color: $Very-Dark-Grayish-Blue;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.02rem;
+  }
+
+  .subheadline {
+    color: $Desaturated-Dark-Blue;
+    line-height: 1.5rem;
+    letter-spacing: 0.01rem;
+    margin-top: 1rem;
+  }
+}
+
+.author-share {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.author-info {
+  display: inline-flex;
+  align-items: center;
+
+  .profile-pic {
+    height: 3.1rem;
+    width: 3.1rem;
+    border-radius: 50%;
+    margin-right: 1.1rem;
+  }
+}
+
+.info {
+  h6 {
+    color: $Very-Dark-Grayish-Blue;
+  }
+  p {
+    color: $Grayish-Blue;
+  }
+}
+
+.share-div {
+  position: relative;
+}
+
+.share-btn {
+  background-color: $Light-Grayish-Blue;
+  border-radius: 50%;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+
+  &:hover {
+    background-color: $Desaturated-Dark-Blue;
+    cursor: pointer;
+
+    svg path {
+      fill: white;
+    }
+  }
+
+  svg path {
+    fill: #6e8098;
+  }
+}
+
+.share-to {
+  display: none;
+  position: absolute;
+  bottom: 4.8rem;
+  right: -7.5rem;
+  background-color: $Very-Dark-Grayish-Blue;
+  width: 19rem;
+  padding: 1.1rem 2.5rem;
+  border-radius: 0.7rem;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: $Grayish-Blue;
+  }
+
+  .pointy-thingy {
+    position: absolute;
+    bottom: -0.79rem;
+    left: 10.5rem;
+    margin-left: -15px;
+    border-top: 10px solid $Very-Dark-Grayish-Blue;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 3vh;
+  color: $Very-Dark-Grayish-Blue;
+
+  a {
+    text-decoration: none;
+    color: $Desaturated-Dark-Blue;
+  }
+}
