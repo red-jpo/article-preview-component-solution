@@ -204,13 +204,14 @@ footer {
   }
 
   .share-div {
-    // display: inline-flex;
+    // display: flex;
     display: none;
     width: 65%;
   }
 
   .share-to {
-    display: flex;
+    // display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     width: 100%;
