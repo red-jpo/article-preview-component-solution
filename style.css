@@ -21,31 +21,17 @@ main {
   border-radius: 1rem;
 }
 
-.img-container {
-  width: 22rem;
-  overflow: hidden;
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 3vh;
+  color: hsl(217, 19%, 35%);
 }
-.img-container img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
-  border-radius: 1rem 0 0 1rem;
+footer a {
+  text-decoration: none;
+  color: hsl(214, 17%, 51%);
 }
 
-.text-container {
-  padding: 2.5rem 3rem;
-  width: 34rem;
-}
-.text-container .headline {
-  color: hsl(217, 19%, 35%);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 2.2rem;
-  letter-spacing: 0.02rem;
-}
 .text-container .subheadline {
   color: hsl(214, 17%, 51%);
   line-height: 1.5rem;
@@ -56,7 +42,6 @@ main {
 .author-share {
   display: inline-flex;
   width: 100%;
-  margin-top: 1.5rem;
   justify-content: space-between;
 }
 
@@ -70,22 +55,79 @@ main {
   border-radius: 50%;
   margin-right: 1.1rem;
 }
-
-.info h6 {
+.author-info h6 {
   color: hsl(217, 19%, 35%);
 }
-.info p {
+.author-info p {
   color: hsl(212, 23%, 69%);
 }
 
-.share-div {
-  position: relative;
+.share-to p {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: hsl(212, 23%, 69%);
 }
 
 .share-btn {
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
   border: none;
+}
+
+@media only screen and (min-width: 751px) {
+  .img-container {
+    width: 22rem;
+    overflow: hidden;
+  }
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
+    border-radius: 1rem 0 0 1rem;
+  }
+  .text-container {
+    padding: 2.5rem 3rem 2rem 3rem;
+    width: 34rem;
+  }
+  .text-container .headline {
+    color: hsl(217, 19%, 35%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    letter-spacing: 0.02rem;
+  }
+  .author-share {
+    padding: 0 3rem 2.5rem 3rem;
+  }
+  .share-div {
+    position: relative;
+  }
+  .share-to {
+    display: none;
+    position: absolute;
+    bottom: 5.35rem;
+    left: -1.8rem;
+    background-color: hsl(217, 19%, 35%);
+    width: 19rem;
+    padding: 1.1rem 2.5rem;
+    border-radius: 0.7rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .share-to .pointy-thingy {
+    position: absolute;
+    bottom: -0.93rem;
+    left: 9.7rem;
+    margin-left: -15px;
+    border-top: 12px solid hsl(217, 19%, 35%);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+  }
+}
+.share-btn {
   height: 2.5rem;
   width: 2.5rem;
 }
@@ -96,44 +138,56 @@ main {
 .share-btn:hover svg path {
   fill: white;
 }
-.share-btn svg path {
-  fill: #6e8098;
-}
 
-.share-to {
-  display: none;
-  position: absolute;
-  bottom: 4.8rem;
-  right: -7.5rem;
-  background-color: hsl(217, 19%, 35%);
-  width: 19rem;
-  padding: 1.1rem 2.5rem;
-  border-radius: 0.7rem;
-  align-items: center;
-  justify-content: space-between;
-}
-.share-to p {
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
-  color: hsl(212, 23%, 69%);
-}
-.share-to .pointy-thingy {
-  position: absolute;
-  bottom: -0.79rem;
-  left: 10.5rem;
-  margin-left: -15px;
-  border-top: 10px solid hsl(217, 19%, 35%);
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  height: 3vh;
-  color: hsl(217, 19%, 35%);
-}
-footer a {
-  text-decoration: none;
-  color: hsl(214, 17%, 51%);
+@media only screen and (max-width: 750px) {
+  main {
+    flex-direction: column;
+    width: 84vw;
+  }
+  .img-container {
+    height: 15rem;
+    overflow: hidden;
+    display: flex;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .img-container img {
+    width: 100%;
+    align-self: center;
+  }
+  .text-container {
+    padding: 2.5rem 2rem 1.5rem 2rem;
+  }
+  .text-container .headline {
+    color: hsl(217, 19%, 35%);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: 0.02rem;
+  }
+  .author-share {
+    padding: 1rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+    background-color: white;
+  }
+  .share-div {
+    display: none;
+    width: 65%;
+  }
+  .share-to {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .share-btn {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+  .share-btn:focus {
+    background-color: hsl(214, 17%, 51%);
+    cursor: pointer;
+  }
+  .share-btn:focus svg path {
+    fill: white;
+  }
 }/*# sourceMappingURL=style.css.map */
