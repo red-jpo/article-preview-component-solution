@@ -174,7 +174,7 @@ footer a {
     width: 65%;
   }
   .share-to {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     width: 100%;
