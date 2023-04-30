@@ -74,7 +74,7 @@ footer a {
   border: none;
 }
 
-@media only screen and (min-width: 751px) {
+@media only screen and (min-width: 768px) {
   .img-container {
     width: 22rem;
     overflow: hidden;
@@ -139,7 +139,7 @@ footer a {
   fill: white;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 767px) {
   main {
     flex-direction: column;
     width: 84vw;
@@ -174,7 +174,7 @@ footer a {
     width: 65%;
   }
   .share-to {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
